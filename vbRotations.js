@@ -153,7 +153,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       },
   };
 
-  this.playerOffsetsSwitchService = {
+  this.playerOffsetsPermutService = {
     1: {
         s:  { x: 350, y: 300 },
         C1: { x: 100, y: 50 },
@@ -204,7 +204,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       },
   };
 
-  this.playerOffsetsSwitchReceive = {
+  this.playerOffsetsPermutReceive = {
     1: {
         s:  { x: 350, y: 300 },
         C1: { x: 350, y: 50 },
@@ -1188,13 +1188,13 @@ monkeysppp.vbRotations.SVGMaker = function() {
       fill: _this.rotationControlBackgroundColourA
     });
     _this.controlServiceService.attr({ cursor: 'pointer' });
-    _this.controlServiceSwitch = _this.sroot.circle(485, 600, _this.rotationControlCirleRadius);
-    _this.controlServiceSwitch.attr({
+    _this.controlServicePermut = _this.sroot.circle(485, 600, _this.rotationControlCirleRadius);
+    _this.controlServicePermut.attr({
       stroke: _this.rotationControlColour,
       strokeWidth: 2,
       fill: _this.rotationControlBackgroundColourA
     });
-    _this.controlServiceSwitch.attr({ cursor: 'pointer' });
+    _this.controlServicePermut.attr({ cursor: 'pointer' });
 
     _this.controlReceiveBase = _this.sroot.circle(115, 700, _this.rotationControlCirleRadius);
     _this.controlReceiveBase.attr({
@@ -1224,13 +1224,13 @@ monkeysppp.vbRotations.SVGMaker = function() {
       fill: _this.rotationControlBackgroundColourA
     });
     _this.controlReceiveHit.attr({ cursor: 'pointer' });
-    _this.controlReceiveSwitch = _this.sroot.circle(485, 700, _this.rotationControlCirleRadius);
-    _this.controlReceiveSwitch.attr({
+    _this.controlReceivePermut = _this.sroot.circle(485, 700, _this.rotationControlCirleRadius);
+    _this.controlReceivePermut.attr({
       stroke: _this.rotationControlColour,
       strokeWidth: 2,
       fill: _this.rotationControlBackgroundColourA
     });
-    _this.controlReceiveSwitch.attr({ cursor: 'pointer' });
+    _this.controlReceivePermut.attr({ cursor: 'pointer' });
 
     var textLabel = _this.sroot.text(115, 640, 'Base');
     textLabel.attr({
@@ -1250,7 +1250,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       'font-family': 'Verdana',
       'font-size':'22'
     });
-    textLabel = _this.sroot.text(485, 640, 'Switch');
+    textLabel = _this.sroot.text(485, 640, 'Permut');
     textLabel.attr({
       fill: _this.rotationControlColour,
       stroke: _this.rotationControlColour,
@@ -1296,7 +1296,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       'font-family': 'Verdana',
       'font-size':'22'
     });
-    textLabel = _this.sroot.text(485, 740, 'Switch');
+    textLabel = _this.sroot.text(485, 740, 'Permut');
     textLabel.attr({
       fill: _this.rotationControlColour,
       stroke: _this.rotationControlColour,
@@ -1308,12 +1308,12 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     _this.controlServiceBase.click(function() {if (move(_this.playerOffsetsBase[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, true, _this.controlServiceBase);}});
     _this.controlServiceService.click(function() {if (move(_this.playerOffsetsServiceService[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, true, _this.controlServiceService);}});
-    _this.controlServiceSwitch.click(function() {if (move(_this.playerOffsetsSwitchService[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, true, _this.controlServiceSwitch);}});
+    _this.controlServicePermut.click(function() {if (move(_this.playerOffsetsPermutService[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, true, _this.controlServicePermut);}});
     _this.controlReceiveBase.click(function() {if (move(_this.playerOffsetsBase[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceiveBase);}});
     _this.controlReceiveReceive.click(function() {if (move(_this.playerOffsetsReceiveReceive[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceiveReceive);}});
     _this.controlReceiveSet.click(function() {if (move(_this.playerOffsetsReceiveSet[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceiveSet);}});
     _this.controlReceiveHit.click(function() {if (move(_this.playerOffsetsReceiveHit[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceiveHit);}});
-    _this.controlReceiveSwitch.click(function() {if (move(_this.playerOffsetsSwitchReceive[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceiveSwitch);}});
+    _this.controlReceivePermut.click(function() {if (move(_this.playerOffsetsPermutReceive[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceivePermut);}});
   }
 
   function drawTutorialButton() {
@@ -1507,12 +1507,12 @@ monkeysppp.vbRotations.SVGMaker = function() {
   function actionSelect(action) {
     _this.controlServiceBase.attr({fill: _this.rotationControlBackgroundColourA});
     _this.controlServiceService.attr({fill: _this.rotationControlBackgroundColourA});
-    _this.controlServiceSwitch.attr({fill: _this.rotationControlBackgroundColourA});
+    _this.controlServicePermut.attr({fill: _this.rotationControlBackgroundColourA});
     _this.controlReceiveBase.attr({fill: _this.rotationControlBackgroundColourA});
     _this.controlReceiveReceive.attr({fill: _this.rotationControlBackgroundColourA});
     _this.controlReceiveSet.attr({fill: _this.rotationControlBackgroundColourA});
     _this.controlReceiveHit.attr({fill: _this.rotationControlBackgroundColourA});
-    _this.controlReceiveSwitch.attr({fill: _this.rotationControlBackgroundColourA});
+    _this.controlReceivePermut.attr({fill: _this.rotationControlBackgroundColourA});
     action.attr({fill: _this.rotationControlColour});
   }
 
