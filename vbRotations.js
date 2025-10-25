@@ -18,8 +18,8 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.rotationControlBackgroundColourA = '#65b6df';
   this.rotationControlBackgroundColourB = '#4596bf';
   this.rotationControlCirleRadius = 12;
-  this.tutorialColour        = '#44cc44';
-  this.tutorialFade          = '#999999';
+  this.Colour  = '#85d6ff';
+  this.Fade          = '#85d6ff';
 
   // Player objects
   this.Passeur = null;
@@ -408,7 +408,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       },
   };
 
-  this.tutorialData = [
+  this.Data = [
     {
       boxPosition: {
         left:   250,
@@ -1316,13 +1316,13 @@ monkeysppp.vbRotations.SVGMaker = function() {
     _this.controlReceivePermut.click(function() {if (move(_this.playerOffsetsPermutReceive[_this.PasseurAt], 500)) {controlSelect(_this.PasseurAt, false, _this.controlReceivePermut);}});
   }
 
-  function drawTutorialButton() {
-    var tutorialButtonBox = _this.sroot.rect(750, 740, 100, 40);
-    tutorialButtonBox.attr({
-      fill: _this.tutorialColour
+  function drawButton() {
+    var ButtonBox = _this.sroot.rect(750, 740, 100, 40);
+    ButtonBox.attr({
+      fill: _this.Colour
     });
-    var tutorialButtonText = _this.sroot.text(800, 768, 'Tutorial');
-    tutorialButtonText.attr({
+    var ButtonText = _this.sroot.text(800, 768, '');
+    ButtonText.attr({
       fill: _this.rotationControlColour,
       stroke: _this.rotationControlColour,
       strokeWidth: '1',
@@ -1332,58 +1332,58 @@ monkeysppp.vbRotations.SVGMaker = function() {
       cursor: 'pointer',
     });
 
-    _this.tutorialButton = _this.sroot.group(tutorialButtonBox, tutorialButtonText);
-    _this.tutorialButton.attr({ cursor: 'pointer' });
+    _this.Button = _this.sroot.group(ButtonBox, ButtonText);
+    _this.Button.attr({ cursor: 'pointer' });
 
-    _this.tutorialButton.click(function() {errorHandler("foo"); drawTutorial(0);});
+    _this.Button.click(function() {errorHandler("foo"); draw(0);});
   }
 
-  function drawTutorial(index) {
+  function draw(index) {
     errorHandler("start");
-    if (index >= _this.tutorialData.length) {
+    if (index >= _this.Data.length) {
       errorHandler("done");
       return;
     }
 
     var p1 = _this.sroot.path("M0 0 H" + _this.width + "V" + _this.height + "H0Z " +
-      "M" + _this.tutorialData[index].boxPosition.right + " " + _this.tutorialData[index].boxPosition.top + " " +
-      "H" + _this.tutorialData[index].boxPosition.left + "V" + _this.tutorialData[index].boxPosition.bottom +
-      "H" + _this.tutorialData[index].boxPosition.right + "Z");
+      "M" + _this.Data[index].boxPosition.right + " " + _this.Data[index].boxPosition.top + " " +
+      "H" + _this.Data[index].boxPosition.left + "V" + _this.Data[index].boxPosition.bottom +
+      "H" + _this.Data[index].boxPosition.right + "Z");
 
-    _this.tutorialMask = _this.sroot.group(p1);
-    _this.tutorialMask.attr({
+    _this.Mask = _this.sroot.group(p1);
+    _this.Mask.attr({
       'fill-rule': 'evenodd',
-      'fill': _this.tutorialFade,
+      'fill': _this.Fade,
       'fill-opacity': 0.8
     });
 
-    _this.tutorialMaskEdge = _this.sroot.rect(
-      _this.tutorialData[index].boxPosition.left,
-      _this.tutorialData[index].boxPosition.top,
-      _this.tutorialData[index].boxPosition.right - _this.tutorialData[index].boxPosition.left,
-      _this.tutorialData[index].boxPosition.bottom - _this.tutorialData[index].boxPosition.top
+    _this.MaskEdge = _this.sroot.rect(
+      _this.Data[index].boxPosition.left,
+      _this.Data[index].boxPosition.top,
+      _this.Data[index].boxPosition.right - _this.Data[index].boxPosition.left,
+      _this.Data[index].boxPosition.bottom - _this.Data[index].boxPosition.top
     );
-    _this.tutorialMaskEdge.attr({
-      stroke: _this.tutorialColour,
+    _this.MaskEdge.attr({
+      stroke: _this.Colour,
       fill: 'none'
     });
 
     var textBox = _this.sroot.rect(
-      _this.tutorialData[index].textPosition.left,
-      _this.tutorialData[index].textPosition.top,
-      _this.tutorialData[index].textPosition.right - _this.tutorialData[index].textPosition.left,
-      _this.tutorialData[index].textPosition.bottom - _this.tutorialData[index].textPosition.top
+      _this.Data[index].textPosition.left,
+      _this.Data[index].textPosition.top,
+      _this.Data[index].textPosition.right - _this.Data[index].textPosition.left,
+      _this.Data[index].textPosition.bottom - _this.Data[index].textPosition.top
     );
     textBox.attr({
-      fill: _this.tutorialColour
+      fill: _this.Colour
     });
 
-    _this.tutorialTextBox = _this.sroot.group(textBox);
+    _this.TextBox = _this.sroot.group(textBox);
 
-    var textChunks = _this.tutorialData[index].text.split('\n');
+    var textChunks = _this.Data[index].text.split('\n');
     for(var i = 0; i < textChunks.length; i++) {
-      var textLine = _this.sroot.text(_this.tutorialData[index].textPosition.left + 10,
-        _this.tutorialData[index].textPosition.top + 26 + (i * 20),
+      var textLine = _this.sroot.text(_this.Data[index].textPosition.left + 10,
+        _this.Data[index].textPosition.top + 26 + (i * 20),
         textChunks[i]);
       textLine.attr({
         fill: _this.rotationControlColour,
@@ -1394,20 +1394,20 @@ monkeysppp.vbRotations.SVGMaker = function() {
         'font-size':'16',
         cursor: 'pointer',
       });
-      _this.tutorialTextBox.add(textLine);
+      _this.TextBox.add(textLine);
     }
 
     var nextButtonBox = _this.sroot.rect(
-      _this.tutorialData[index].nextPosition.left,
-      _this.tutorialData[index].nextPosition.top,
+      _this.Data[index].nextPosition.left,
+      _this.Data[index].nextPosition.top,
       100,
       40
     );
     nextButtonBox.attr({
-      fill: _this.tutorialColour
+      fill: _this.Colour
     });
-    var nextButtonText = _this.sroot.text(_this.tutorialData[index].nextPosition.left + 50,
-      _this.tutorialData[index].nextPosition.top + 28,
+    var nextButtonText = _this.sroot.text(_this.Data[index].nextPosition.left + 50,
+      _this.Data[index].nextPosition.top + 28,
       'Next'
     );
     nextButtonText.attr({
@@ -1420,15 +1420,15 @@ monkeysppp.vbRotations.SVGMaker = function() {
       cursor: 'pointer',
     });
 
-    _this.tutorialNextButton = _this.sroot.group(nextButtonBox, nextButtonText);
-    _this.tutorialNextButton.attr({ cursor: 'pointer' });
+    _this.NextButton = _this.sroot.group(nextButtonBox, nextButtonText);
+    _this.NextButton.attr({ cursor: 'pointer' });
 
-    _this.tutorialNextButton.click(function() {
-      _this.tutorialMask.remove();
-      _this.tutorialTextBox.remove();
-      _this.tutorialNextButton.remove();
-      _this.tutorialMaskEdge.remove();
-        drawTutorial(index+1);
+    _this.NextButton.click(function() {
+      _this.Mask.remove();
+      _this.TextBox.remove();
+      _this.NextButton.remove();
+      _this.MaskEdge.remove();
+        draw(index+1);
     });
   }
 
@@ -1456,7 +1456,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
     drawRotationControl();
     drawActionControl();
     drawPlayers();
-    drawTutorialButton();
+    drawButton();
     initialisePlayers();
   }
 
