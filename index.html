@@ -1,22 +1,21 @@
+```html
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <title>Volleyball Rotations</title>
-    <script src="js/snap.svg-min.js"></script>
-    <script src="js/vbRotations.js"></script>
+    <!-- Si tu as snap.svg-min.js, mets-le à la racine ou adapte le chemin -->
+    <script src="snap.svg-min.js"></script>
+    <script src="vbRotations.js"></script>
     <script type="text/javascript">
       var svgMaker;
-
       function clean(elem) {
         while (elem.firstChild) {
             elem.removeChild(elem.firstChild);
         }
       }
-
       function handleError(msg) {
         alert(msg);
       }
-
       function go() {
         var svgDiv = document.getElementById('diagram');
         clean(svgDiv);
@@ -27,9 +26,14 @@
         svgDiv.appendChild(svgRoot);
         svgMaker.draw();
       }
-
       function move() {
         svgMaker.move();
+      }
+    </script>
+  </head>
+  <body onload="go()">
+    <div id="diagram"></div>
+  </body>
       }
 
       window.onload = function () {
