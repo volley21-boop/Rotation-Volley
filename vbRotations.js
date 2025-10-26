@@ -671,9 +671,9 @@ monkeysppp.vbRotations.SVGMaker = function() {
     });
     var A2Label = _this.sroot.text(75, 50, 'A2');
     A2Label.attr({
-      fill: 'none',
+      fill: 'lightblue',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -690,9 +690,9 @@ monkeysppp.vbRotations.SVGMaker = function() {
     });
     var C1Label = _this.sroot.text(75, 50, 'C1');
     C1Label.attr({
-      fill: 'none',
+      fill: 'lightblue',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -709,9 +709,9 @@ monkeysppp.vbRotations.SVGMaker = function() {
     });
     var oppoLabel = _this.sroot.text(75, 50, 'Po');
     oppoLabel.attr({
-      fill: 'none',
+      fill: 'lightblue',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -730,7 +730,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
     A1Label.attr({
       fill: 'lightblue',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -747,9 +747,9 @@ monkeysppp.vbRotations.SVGMaker = function() {
     });
     var C2Label = _this.sroot.text(75, 50, 'C2');
     C2Label.attr({
-      fill: 'none',
+      fill: 'lightblue',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -1548,7 +1548,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
     return true;
   }
 var img = document.createElement('img');
-img.src = 'depf.png';
+img.src = 'js/depf.png';
 img.style.width = '200px'; // largeur de l'image
 img.style.height = '200px'; // hauteur de l'image
 img.style.position = 'absolute'; // position absolue
