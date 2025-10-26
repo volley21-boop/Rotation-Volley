@@ -1,5 +1,4 @@
 var monkeysppp = monkeysppp || { vbRotations: {} };
-
 monkeysppp.vbRotations.SVGMaker = function() {
   var _this = this;
 
@@ -1548,6 +1547,15 @@ monkeysppp.vbRotations.SVGMaker = function() {
     _this.C2.animate({ transform:'translate(' + players.C2.x + ', ' + players.C2.y + ')'}, time, null, donemove);
     return true;
   }
+var img = document.createElement('img');
+img.src = 'js/depf.png';
+img.style.width = '200px'; // largeur de l'image
+img.style.height = '200px'; // hauteur de l'image
+img.style.position = 'absolute'; // position absolue
+img.style.top = '600px'; // position verticale
+img.style.left = '700px'; // position horizontale
+document.body.appendChild(img);
+
 //  function goback() {
 //    _this.Passeur.animate({ transform:'translate(0, 0)'}, 1000, null, donemove);
 //  }
