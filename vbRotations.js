@@ -647,15 +647,15 @@ monkeysppp.vbRotations.SVGMaker = function() {
     // Player markers
     var PasseurCircle = _this.sroot.circle(75, 50, 27);
     PasseurCircle.attr({
-      stroke: '#eeeeee',
+      stroke: '#F52787',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var PasseurLabel = _this.sroot.text(75, 50, 'S');
+    var PasseurLabel = _this.sroot.text(75, 50, 'P');
     PasseurLabel.attr({
-      fill: 'none',
+      fill: '#F52787',
       stroke: '#eeeeee',
-      strokeWidth: '4',
+      strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
@@ -666,7 +666,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     var A2Circle = _this.sroot.circle(75, 50, 27);
     A2Circle.attr({
-      stroke: '#eeeeee',
+      stroke: '#DDF527',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
@@ -685,7 +685,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     var C1Circle = _this.sroot.circle(75, 50, 27);
     C1Circle.attr({
-      stroke: '#eeeeee',
+      stroke: '27F568',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
@@ -704,11 +704,11 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     var oppoCircle = _this.sroot.circle(75, 50, 27);
     oppoCircle.attr({
-      stroke: '#eeeeee',
+      stroke: 'CD68F2',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var oppoLabel = _this.sroot.text(75, 50, 'O');
+    var oppoLabel = _this.sroot.text(75, 50, 'Po');
     oppoLabel.attr({
       fill: 'none',
       stroke: '#eeeeee',
@@ -723,13 +723,13 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     var A1Circle = _this.sroot.circle(75, 50, 27);
     A1Circle.attr({
-      stroke: '#eeeeee',
+      stroke: 'DDF527',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
     var A1Label = _this.sroot.text(75, 50, 'A1');
     A1Label.attr({
-      fill: 'none',
+      fill: 'lightblue',
       stroke: '#eeeeee',
       strokeWidth: '4',
       'text-anchor':'middle',
@@ -742,7 +742,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     var C2Circle = _this.sroot.circle(75, 50, 27);
     C2Circle.attr({
-      stroke: '#eeeeee',
+      stroke: '27F568',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
