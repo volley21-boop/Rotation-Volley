@@ -23,10 +23,10 @@ monkeysppp.vbRotations.SVGMaker = function() {
   // Player objects
   this.Passeur = null;
   this.oppo = null;
-  this.A2 = null;
-  this.A1 = null;
-  this.A2 = null;
-  this.A1 = null;
+  this.C2 = null;
+  this.C1 = null;
+  this.C2 = null;
+  this.C1 = null;
 
   this.rotationControls = null;
   this.highlightedPlayer = 0;
@@ -53,50 +53,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsBase = {
     1: {
         s:  { x: 350, y: 300 },
-        C1: { x: 350, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 350, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 100, y: 50 },
-        C2: { x: 100, y: 300 },
-        A1: { x: 225, y: 350 },
+        RA2: { x: 100, y: 300 },
+        C1: { x: 225, y: 350 },
       },
     2: {
-        A1: { x: 350, y: 300 },
+        C1: { x: 350, y: 300 },
         s:  { x: 350, y: 50 },
-        C1: { x: 225, y: 50 },
-        A2: { x: 100, y: 50 },
+        RA1: { x: 225, y: 50 },
+        C2: { x: 100, y: 50 },
         o:  { x: 100, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 350, y: 300 },
-        A1: { x: 350, y: 50 },
+        RA2: { x: 350, y: 300 },
+        C1: { x: 350, y: 50 },
         s:  { x: 225, y: 50 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 100, y: 300 },
         o:  { x: 225, y: 350 },
       },
     4: {
         o:  { x: 350, y: 300 },
-        C2: { x: 350, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 350, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 100, y: 50 },
-        C1: { x: 100, y: 300 },
-        A2: { x: 225, y: 350 },
+        RA1: { x: 100, y: 300 },
+        C2: { x: 225, y: 350 },
       },
     5: {
-        A2: { x: 350, y: 300 },
+        C2: { x: 350, y: 300 },
         o:  { x: 350, y: 50 },
-        C2: { x: 225, y: 50 },
-        A1: { x: 100, y: 50 },
+        RA2: { x: 225, y: 50 },
+        C1: { x: 100, y: 50 },
         s:  { x: 100, y: 300 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 350, y: 300 },
-        A2: { x: 350, y: 50 },
+        RA1: { x: 350, y: 300 },
+        C2: { x: 350, y: 50 },
         o:  { x: 225, y: 50 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 100, y: 300 },
         s:  { x: 225, y: 350 },
       },
   };
@@ -104,50 +104,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsServiceService = {
     1: {
         s:  { x: 350, y: 475 },
-        C1: { x: 290, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 290, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 160, y: 50 },
-        C2: { x: 100, y: 300 },
-        A1: { x: 225, y: 350 },
+        RA2: { x: 100, y: 300 },
+        C1: { x: 225, y: 350 },
       },
     2: {
-        A1: { x: 350, y: 475 },
+        C1: { x: 350, y: 475 },
         s:  { x: 290, y: 50 },
-        C1: { x: 225, y: 50 },
-        A2: { x: 160, y: 50 },
+        RA1: { x: 225, y: 50 },
+        C2: { x: 160, y: 50 },
         o:  { x: 100, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 350, y: 475 },
-        A1: { x: 290, y: 50 },
+        RA2: { x: 350, y: 475 },
+        C1: { x: 290, y: 50 },
         s:  { x: 225, y: 50 },
-        C1: { x: 160, y: 50 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 160, y: 50 },
+        C2: { x: 100, y: 300 },
         o:  { x: 225, y: 350 },
       },
     4: {
         o:  { x: 350, y: 475 },
-        C2: { x: 290, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 290, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 160, y: 50 },
-        C1: { x: 100, y: 300 },
-        A2: { x: 225, y: 350 },
+        RA1: { x: 100, y: 300 },
+        C2: { x: 225, y: 350 },
       },
     5: {
-        A2: { x: 350, y: 475 },
+        C2: { x: 350, y: 475 },
         o:  { x: 290, y: 50 },
-        C2: { x: 225, y: 50 },
-        A1: { x: 160, y: 50 },
+        RA2: { x: 225, y: 50 },
+        C1: { x: 160, y: 50 },
         s:  { x: 100, y: 300 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 350, y: 475 },
-        A2: { x: 290, y: 50 },
+        RA1: { x: 350, y: 475 },
+        C2: { x: 290, y: 50 },
         o:  { x: 225, y: 50 },
-        C2: { x: 160, y: 50 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 160, y: 50 },
+        C1: { x: 100, y: 300 },
         s:  { x: 225, y: 350 },
       },
   };
@@ -155,50 +155,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsPermutService = {
     1: {
         s:  { x: 350, y: 300 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 350, y: 50 },
-        C2: { x: 225, y: 350 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 100, y: 300 },
       },
     2: {
-        A1: { x: 100, y: 300 },
+        C1: { x: 100, y: 300 },
         s:  { x: 350, y: 50 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 350, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 225, y: 350 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 50 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 100, y: 300 },
         o:  { x: 350, y: 300 },
       },
     4: {
         o:  { x: 350, y: 300 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 50 },
-        C1: { x: 225, y: 350 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 100, y: 300 },
       },
     5: {
-        A2: { x: 100, y: 300 },
+        C2: { x: 100, y: 300 },
         o:  { x: 350, y: 50 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 300 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 225, y: 350 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 225, y: 50 },
         o:  { x: 350, y: 50 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 100, y: 300 },
         s:  { x: 350, y: 300 },
       },
   };
@@ -206,50 +206,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsPermutReceive = {
     1: {
         s:  { x: 350, y: 300 },
-        C1: { x: 350, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 350, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 100, y: 50 },
-        C2: { x: 225, y: 350 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 100, y: 300 },
       },
     2: {
-        A1: { x: 100, y: 300 },
+        C1: { x: 100, y: 300 },
         s:  { x: 350, y: 50 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 350, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 225, y: 350 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 50 },
-        C1: { x: 100, y: 50 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 100, y: 50 },
+        C2: { x: 100, y: 300 },
         o:  { x: 350, y: 300 },
       },
     4: {
         o:  { x: 350, y: 300 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 50 },
-        C1: { x: 225, y: 350 },
-        A2: { x: 100, y: 300 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 100, y: 300 },
       },
     5: {
-        A2: { x: 100, y: 300 },
+        C2: { x: 100, y: 300 },
         o:  { x: 350, y: 50 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 350, y: 300 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 225, y: 350 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 225, y: 50 },
         o:  { x: 350, y: 50 },
-        C2: { x: 100, y: 50 },
-        A1: { x: 100, y: 300 },
+        RA2: { x: 100, y: 50 },
+        C1: { x: 100, y: 300 },
         s:  { x: 350, y: 300 },
       },
   };
@@ -257,50 +257,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsReceiveReceive = {
     1: {
         s:  { x: 400, y: 85 },
-        C1: { x: 420, y: 30 },
-        A2: { x: 380, y: 140 },
+        RA1: { x: 420, y: 30 },
+        C2: { x: 380, y: 140 },
         o:  { x: 100, y: 300 },
-        C2: { x: 225, y: 350 },
-        A1: { x: 350, y: 300 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 350, y: 300 },
       },
     2: {
-        A1: { x: 350, y: 300 },
+        C1: { x: 350, y: 300 },
         s:  { x: 350, y: 50 },
-        C1: { x: 100, y: 300 },
-        A2: { x: 20, y: 80 },
+        RA1: { x: 100, y: 300 },
+        C2: { x: 20, y: 80 },
         o:  { x: 130, y: 420 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 350, y: 300 },
-        A1: { x: 370, y: 70 },
+        RA2: { x: 350, y: 300 },
+        C1: { x: 370, y: 70 },
         s:  { x: 300, y: 50 },
-        C1: { x: 100, y: 300 },
-        A2: { x: 225, y: 350 },
+        RA1: { x: 100, y: 300 },
+        C2: { x: 225, y: 350 },
         o:  { x: 280, y: 410 },
       },
     4: {
         o:  { x: 380, y: 410 },
-        C2: { x: 100, y: 300 },
-        A1: { x: 70, y: 70 },
+        RA2: { x: 100, y: 300 },
+        C1: { x: 70, y: 70 },
         s:  { x: 30, y: 30 },
-        C1: { x: 225, y: 350 },
-        A2: { x: 350, y: 300 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 350, y: 300 },
       },
     5: {
-        A2: { x: 350, y: 300 },
+        C2: { x: 350, y: 300 },
         o:  { x: 420, y: 50 },
-        C2: { x: 100, y: 300 },
-        A1: { x: 30, y: 30 },
+        RA2: { x: 100, y: 300 },
+        C1: { x: 30, y: 30 },
         s:  { x: 120, y: 70 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 350, y: 300 },
-        A2: { x: 350, y: 70 },
+        RA1: { x: 350, y: 300 },
+        C2: { x: 350, y: 70 },
         o:  { x: 280, y: 30 },
-        C2: { x: 100, y: 300 },
-        A1: { x: 225, y: 350 },
+        RA2: { x: 100, y: 300 },
+        C1: { x: 225, y: 350 },
         s:  { x: 255, y: 85 },
       },
   };
@@ -308,50 +308,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsReceiveSet = {
     1: {
         s:  { x: 300, y: 50 },
-        C1: { x: 450, y: 150 },
-        A2: { x: 225, y: 150 },
+        RA1: { x: 450, y: 150 },
+        C2: { x: 225, y: 150 },
         o:  { x: 0,   y: 150 },
-        C2: { x: 225, y: 350 },
-        A1: { x: 350, y: 300 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 350, y: 300 },
       },
     2: {
-        A1: { x: 350, y: 300 },
+        C1: { x: 350, y: 300 },
         s:  { x: 300, y: 50 },
-        C1: { x: 0,   y: 150 },
-        A2: { x: 225, y: 150 },
+        RA1: { x: 0,   y: 150 },
+        C2: { x: 225, y: 150 },
         o:  { x: 100, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 350, y: 300 },
-        A1: { x: 225, y: 150 },
+        RA2: { x: 350, y: 300 },
+        C1: { x: 225, y: 150 },
         s:  { x: 300, y: 50 },
-        C1: { x: 0,   y: 150 },
-        A2: { x: 225, y: 350 },
+        RA1: { x: 0,   y: 150 },
+        C2: { x: 225, y: 350 },
         o:  { x: 280, y: 410 },
       },
     4: {
         o:  { x: 380, y: 410 },
-        C2: { x: 0,   y: 150 },
-        A1: { x: 225, y: 150 },
+        RA2: { x: 0,   y: 150 },
+        C1: { x: 225, y: 150 },
         s:  { x: 300, y: 50 },
-        C1: { x: 225, y: 350 },
-        A2: { x: 350, y: 300 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 350, y: 300 },
       },
     5: {
-        A2: { x: 350, y: 300 },
+        C2: { x: 350, y: 300 },
         o:  { x: 450, y: 150 },
-        C2: { x: 0,   y: 150 },
-        A1: { x: 225, y: 150 },
+        RA2: { x: 0,   y: 150 },
+        C1: { x: 225, y: 150 },
         s:  { x: 300, y: 50 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 350, y: 300 },
-        A2: { x: 225, y: 150 },
+        RA1: { x: 350, y: 300 },
+        C2: { x: 225, y: 150 },
         o:  { x: 450, y: 150 },
-        C2: { x: 0,   y: 150 },
-        A1: { x: 225, y: 350 },
+        RA2: { x: 0,   y: 150 },
+        C1: { x: 225, y: 350 },
         s:  { x: 300, y: 50 },
       },
   };
@@ -359,50 +359,50 @@ monkeysppp.vbRotations.SVGMaker = function() {
   this.playerOffsetsReceiveHit = {
     1: {
         s:  { x: 300, y: 50 },
-        C1: { x: 400, y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 400, y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 50, y: 50 },
-        C2: { x: 225, y: 350 },
-        A1: { x: 350, y: 300 },
+        RA2: { x: 225, y: 350 },
+        C1: { x: 350, y: 300 },
       },
     2: {
-        A1: { x: 350, y: 300 },
+        C1: { x: 350, y: 300 },
         s:  { x: 300, y: 50 },
-        C1: { x: 50,  y: 50 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 50,  y: 50 },
+        C2: { x: 225, y: 50 },
         o:  { x: 100, y: 300 },
-        C2: { x: 225, y: 350 },
+        RA2: { x: 225, y: 350 },
       },
     3: {
-        C2: { x: 350, y: 300 },
-        A1: { x: 225,  y: 50 },
+        RA2: { x: 350, y: 300 },
+        C1: { x: 225,  y: 50 },
         s:  { x: 300, y: 50 },
-        C1: { x: 50, y: 50 },
-        A2: { x: 225, y: 350 },
+        RA1: { x: 50, y: 50 },
+        C2: { x: 225, y: 350 },
         o:  { x: 280, y: 410 },
       },
     4: {
         o:  { x: 380, y: 410 },
-        C2: { x: 50, y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 50, y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 300, y: 50 },
-        C1: { x: 225, y: 350 },
-        A2: { x: 350, y: 300 },
+        RA1: { x: 225, y: 350 },
+        C2: { x: 350, y: 300 },
       },
     5: {
-        A2: { x: 350, y: 300 },
+        C2: { x: 350, y: 300 },
         o:  { x: 400, y: 50 },
-        C2: { x: 50,  y: 50 },
-        A1: { x: 225, y: 50 },
+        RA2: { x: 50,  y: 50 },
+        C1: { x: 225, y: 50 },
         s:  { x: 300, y: 50 },
-        C1: { x: 225, y: 350 },
+        RA1: { x: 225, y: 350 },
       },
     6: {
-        C1: { x: 350, y: 300 },
-        A2: { x: 225, y: 50 },
+        RA1: { x: 350, y: 300 },
+        C2: { x: 225, y: 50 },
         o:  { x: 400, y: 50 },
-        C2: { x: 50,  y: 50 },
-        A1: { x: 225, y: 350 },
+        RA2: { x: 50,  y: 50 },
+        C1: { x: 225, y: 350 },
         s:  { x: 300, y: 50 },
       },
   };
@@ -663,14 +663,14 @@ monkeysppp.vbRotations.SVGMaker = function() {
     _this.Passeur = _this.sroot.group(PasseurCircle, PasseurLabel);
     _this.Passeur.attr({ cursor: 'pointer' });
 
-    var A2Circle = _this.sroot.circle(75, 50, 27);
-    A2Circle.attr({
+    var C2Circle = _this.sroot.circle(75, 50, 27);
+    C2Circle.attr({
       stroke: '#DDF527',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var A2Label = _this.sroot.text(75, 50, 'A2');
-    A2Label.attr({
+    var C2Label = _this.sroot.text(75, 50, 'C2');
+    C2Label.attr({
       fill: 'lightblue',
       stroke: '#eeeeee',
       strokeWidth: '2',
@@ -679,27 +679,27 @@ monkeysppp.vbRotations.SVGMaker = function() {
       'font-family': 'Verdana',
       'font-size':'30',
     });
-    _this.A2 = _this.sroot.group(A2Circle, A2Label);
-    _this.A2.attr({ cursor: 'pointer' });
+    _this.C2 = _this.sroot.group(C2Circle, C2Label);
+    _this.C2.attr({ cursor: 'pointer' });
 
-    var C1Circle = _this.sroot.circle(75, 50, 27);
-    C1Circle.attr({
+    var RA1Circle = _this.sroot.circle(75, 50, 27);
+    RA1Circle.attr({
       stroke: '27F568',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var C1Label = _this.sroot.text(75, 50, 'C1');
-    C1Label.attr({
+    var RA1Label = _this.sroot.text(75, 50, 'RA1');
+    RA1Label.attr({
       fill: 'lightblue',
       stroke: '#eeeeee',
       strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
-      'font-size':'30',
+      'font-size':'20',
     });
-    _this.C1 = _this.sroot.group(C1Circle, C1Label);
-    _this.C1.attr({ cursor: 'pointer' });
+    _this.RA1 = _this.sroot.group(RA1Circle, RA1Label);
+    _this.RA1.attr({ cursor: 'pointer' });
 
     var oppoCircle = _this.sroot.circle(75, 50, 27);
     oppoCircle.attr({
@@ -720,14 +720,14 @@ monkeysppp.vbRotations.SVGMaker = function() {
     _this.oppo = _this.sroot.group(oppoCircle, oppoLabel);
     _this.oppo.attr({ cursor: 'pointer' });
 
-    var A1Circle = _this.sroot.circle(75, 50, 27);
-    A1Circle.attr({
+    var C1Circle = _this.sroot.circle(75, 50, 27);
+    C1Circle.attr({
       stroke: 'DDF527',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var A1Label = _this.sroot.text(75, 50, 'A1');
-    A1Label.attr({
+    var C1Label = _this.sroot.text(75, 50, 'C1');
+    C1Label.attr({
       fill: 'lightblue',
       stroke: '#eeeeee',
       strokeWidth: '2',
@@ -736,34 +736,34 @@ monkeysppp.vbRotations.SVGMaker = function() {
       'font-family': 'Verdana',
       'font-size':'30',
     });
-    _this.A1 = _this.sroot.group(A1Circle, A1Label);
-    _this.A1.attr({ cursor: 'pointer' });
+    _this.C1 = _this.sroot.group(C1Circle, C1Label);
+    _this.C1.attr({ cursor: 'pointer' });
 
-    var C2Circle = _this.sroot.circle(75, 50, 27);
-    C2Circle.attr({
+    var RA2Circle = _this.sroot.circle(75, 50, 27);
+    RA2Circle.attr({
       stroke: '27F568',
       strokeWidth: 4,
       fill: _this.playerColour,
     });
-    var C2Label = _this.sroot.text(75, 50, 'C2');
-    C2Label.attr({
+    var RA2Label = _this.sroot.text(75, 50, 'RA2');
+    RA2Label.attr({
       fill: 'lightblue',
       stroke: '#eeeeee',
       strokeWidth: '2',
       'text-anchor':'middle',
       'dominant-baseline':'central',
       'font-family': 'Verdana',
-      'font-size':'30',
+      'font-size':'20',
     });
-    _this.C2 = _this.sroot.group(C2Circle, C2Label);
-    _this.C2.attr({ cursor: 'pointer' });
+    _this.RA2 = _this.sroot.group(RA2Circle, RA2Label);
+    _this.RA2.attr({ cursor: 'pointer' });
 
     _this.Passeur.click(function() {toggleHighlightPlayer(PasseurCircle);});
     _this.oppo.click(function() {toggleHighlightPlayer(oppoCircle);});
-    _this.C1.click(function() {toggleHighlightPlayer(C1Circle);});
+    _this.RA1.click(function() {toggleHighlightPlayer(RA1Circle);});
+    _this.RA2.click(function() {toggleHighlightPlayer(RA2Circle);});
     _this.C2.click(function() {toggleHighlightPlayer(C2Circle);});
-    _this.A2.click(function() {toggleHighlightPlayer(A2Circle);});
-    _this.A1.click(function() {toggleHighlightPlayer(A1Circle);});
+    _this.C1.click(function() {toggleHighlightPlayer(C1Circle);});
   }
 
   function drawRotationControl() {
@@ -1541,10 +1541,10 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
     _this.Passeur.animate({ transform:'translate(' + players.s.x + ', ' + players.s.y + ')'}, time, null, donemove);
     _this.oppo.animate({ transform:'translate(' + players.o.x + ', ' + players.o.y + ')'}, time, null, donemove);
-    _this.A2.animate({ transform:'translate(' + players.A2.x + ', ' + players.A2.y + ')'}, time, null, donemove);
-    _this.A1.animate({ transform:'translate(' + players.A1.x + ', ' + players.A1.y + ')'}, time, null, donemove);
-    _this.C1.animate({ transform:'translate(' + players.C1.x + ', ' + players.C1.y + ')'}, time, null, donemove);
     _this.C2.animate({ transform:'translate(' + players.C2.x + ', ' + players.C2.y + ')'}, time, null, donemove);
+    _this.C1.animate({ transform:'translate(' + players.C1.x + ', ' + players.C1.y + ')'}, time, null, donemove);
+    _this.RA1.animate({ transform:'translate(' + players.RA1.x + ', ' + players.RA1.y + ')'}, time, null, donemove);
+    _this.RA2.animate({ transform:'translate(' + players.RA2.x + ', ' + players.RA2.y + ')'}, time, null, donemove);
     return true;
   }
 var img = document.createElement('img');
