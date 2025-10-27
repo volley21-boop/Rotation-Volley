@@ -1548,7 +1548,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
     return true;
   }
 var img = document.createElement('img');
-img.src = 'js/depf.png';
+img.src = 'depf.png';
 img.style.width = '200px'; // largeur de l'image
 img.style.height = '200px'; // hauteur de l'image
 img.style.position = 'absolute'; // position absolue
