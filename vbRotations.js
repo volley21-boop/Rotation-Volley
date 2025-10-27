@@ -1268,7 +1268,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
       'font-family': 'Verdana',
       'font-size':'22'
     });
-    textLabel = _this.sroot.text(207, 740, 'Pass');
+    textLabel = _this.sroot.text(207, 740, 'Recep');
     textLabel.attr({
       fill: _this.rotationControlColour,
       stroke: _this.rotationControlColour,
