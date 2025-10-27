@@ -363,10 +363,10 @@ monkeysppp.vbRotations.SVGMaker = function() {
         C2: { x: 225, y: 50 },
         o:  { x: 50, y: 50 },
         RA2: { x: 225, y: 160 },
-        C1: { x: 350, y: 300 },
+        C1: { x: 100, y: 300 },
       },
     2: {
-        C1: { x: 350, y: 300 },
+        C1: { x: 100, y: 300 },
         s:  { x: 300, y: 50 },
         RA1: { x: 50,  y: 50 },
         C2: { x: 225, y: 50 },
@@ -378,7 +378,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
         C1: { x: 225,  y: 50 },
         s:  { x: 300, y: 50 },
         RA1: { x: 50, y: 50 },
-        C2: { x: 225, y: 350 },
+        C2: { x: 100, y: 300 },
         o:  { x: 350, y: 160 },
       },
     4: {
@@ -387,7 +387,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
         C1: { x: 225, y: 50 },
         s:  { x: 300, y: 50 },
         RA1: { x: 225, y: 160 },
-        C2: { x: 350, y: 300 },
+        C2: { x: 100, y: 300 },
       },
     5: {
         C2: { x: 350, y: 300 },
