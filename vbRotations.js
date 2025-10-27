@@ -256,12 +256,12 @@ monkeysppp.vbRotations.SVGMaker = function() {
 
   this.playerOffsetsReceiveReceive = {
     1: {
-        s:  { x: 400, y: 85 },
-        RA1: { x: 420, y: 30 },
-        C2: { x: 380, y: 140 },
-        o:  { x: 100, y: 300 },
-        RA2: { x: 225, y: 350 },
-        C1: { x: 350, y: 300 },
+        s:  { x: 400, y: 300 },
+        RA1: { x: 350, y: 280 },
+        C2: { x: 180, y: 140 },
+        o:  { x: 70, y: 150 },
+        RA2: { x: 98, y: 300 },
+        C1: { x: 215, y: 310 },
       },
     2: {
         C1: { x: 350, y: 300 },
@@ -1548,7 +1548,7 @@ monkeysppp.vbRotations.SVGMaker = function() {
     return true;
   }
 var img = document.createElement('img');
-img.src = 'depf.png';
+img.src = 'js/depf.png';
 img.style.width = '200px'; // largeur de l'image
 img.style.height = '200px'; // hauteur de l'image
 img.style.position = 'absolute'; // position absolue
